@@ -8,22 +8,22 @@ Thanks for wanting to help with the Project Management System. This page explain
 2. Pick an issue labelled `good first issue` or `help wanted`, or open a new one if you found a bug or have an idea.
 3. Comment on the issue that you want to work on it and wait until the maintainer assigns it to you. This avoids two people doing the same work.
 
-Read the API contract in the [README](README.md#api-endpoints) before you start, the frontend and backend both follow it.
+Read the API contract in the [README](README.md#api-endpoints) before you start. The frontend and backend both follow it.
 
 ## Set up locally
 
-Follow the [setup steps](README.md#setup) in the README. You need Node.js and your own MongoDB Atlas connection string for the backend.
+Follow the [setup steps](README.md#setup) in the README. You need Node.js 20.19 or newer and your own MongoDB Atlas connection string for the backend.
 
 ## Workflow
 
-Nobody pushes to `main` directly, everything goes through a pull request.
+Nobody pushes to `main` directly. Everything goes through a pull request.
 
 1. Fork the repo and clone your fork
    ```bash
    gh repo fork hub-mayank/project-management-system --clone
    cd project-management-system
    ```
-2. Create a branch from an up to date `main`, named after the issue
+2. Create a branch from an up-to-date `main`, named after the issue
    ```bash
    git checkout -b feature/auth-api
    ```
