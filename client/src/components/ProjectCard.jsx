@@ -1,4 +1,4 @@
-function ProjectCard({ project }) {
+function ProjectCard({ project, isAdmin, onEdit, saving }) {
   return (
     <article className="card project-card">
       <h3>{project.name}</h3>
@@ -15,6 +15,11 @@ function ProjectCard({ project }) {
             <li key={member._id}>{member.name}</li>
           ))}
         </ul>
+      )}
+      {isAdmin && (
+        <div className="project-actions">
+          <button type="button" onClick={() => onEdit(project)} disabled={saving}>Edit</button>
+        </div>
       )}
     </article>
   )
