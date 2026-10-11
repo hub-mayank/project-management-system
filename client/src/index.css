@@ -90,3 +90,51 @@ button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+.project-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.project-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.project-description {
+  white-space: pre-wrap;
+}
+
+.project-form {
+  margin: 20px 0;
+}
+
+.project-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.project-form .project-members {
+  margin-bottom: 16px;
+}
+
+.project-form .project-member {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-wrap: anywhere;
+}
+
+.project-form .project-member input {
+  width: auto;
+  margin: 0;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
