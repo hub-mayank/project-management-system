@@ -90,3 +90,18 @@ button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+.project-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.project-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.project-description {
+  white-space: pre-wrap;
+}
