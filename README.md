@@ -1,5 +1,9 @@
 # Project Management System
 
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Stack](https://img.shields.io/badge/stack-MERN-green)
+![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
+
 A full stack web app where an admin creates projects and assigns team members, and members log in to view and update the status of the projects assigned to them.
 
 Team: **Merge Conflict** (Team 16)
@@ -133,16 +137,9 @@ Never commit `.env`. Only `.env.example` is committed.
 
 ## Contributing
 
-Nobody pushes to `main` directly. Every change comes through a pull request that the team lead reviews.
+Contributions are welcome. Pick an open [issue](https://github.com/hub-mayank/project-management-system/issues), fork the repo, work on a branch and open a pull request. Nobody pushes to `main` directly, every change is reviewed by the maintainer.
 
-1. Fork the repo and clone your fork: `gh repo fork hub-mayank/project-management-system --clone`
-2. Create a branch for your issue: `git checkout -b feature/auth-api`
-3. Make your changes and commit with a clear message
-4. Push the branch to your fork: `git push origin feature/auth-api`
-5. Open a pull request to `main` of this repo and write `Closes #<issue number>` in the description
-6. Fix the review comments by pushing more commits to the same branch
-
-Before starting a new issue, update your fork from `main` so you do not work on old code.
+Read the full [contributing guide](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md) before you start.
 
 ## Screenshots
 
@@ -154,3 +151,7 @@ To be added after deployment.
 |---|---|
 | Frontend (Vercel) | to be added |
 | Backend (Render) | to be added |
+
+## License
+
+Released under the [MIT License](LICENSE).
