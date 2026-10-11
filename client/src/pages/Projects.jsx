@@ -82,6 +82,20 @@ function Projects() {
     setProjectToEdit(project)
   }
 
+  async function updateStatus(projectId, status) {
+    setSaving(true)
+    setError('')
+
+    try {
+      await apiRequest(`/projects/${projectId}`, 'PUT', { status })
+      await getProjects()
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setSaving(false)
+    }
+  }
+
   return (
     <div className="container">
       <Navbar />
@@ -114,6 +128,7 @@ function Projects() {
             project={project}
             isAdmin={isAdmin}
             onEdit={editProject}
+            onStatusChange={updateStatus}
             saving={saving}
           />
         ))}

@@ -1,4 +1,4 @@
-function ProjectCard({ project, isAdmin, onEdit, saving }) {
+function ProjectCard({ project, isAdmin, onEdit, onStatusChange, saving }) {
   return (
     <article className="card project-card">
       <h3>{project.name}</h3>
@@ -16,9 +16,23 @@ function ProjectCard({ project, isAdmin, onEdit, saving }) {
           ))}
         </ul>
       )}
-      {isAdmin && (
+      {isAdmin ? (
         <div className="project-actions">
           <button type="button" onClick={() => onEdit(project)} disabled={saving}>Edit</button>
+        </div>
+      ) : (
+        <div>
+          <label htmlFor={`status-${project._id}`}>Change status</label>
+          <select
+            id={`status-${project._id}`}
+            value={project.status}
+            onChange={(e) => onStatusChange(project._id, e.target.value)}
+            disabled={saving}
+          >
+            <option value="pending">Pending</option>
+            <option value="in-progress">In progress</option>
+            <option value="completed">Completed</option>
+          </select>
         </div>
       )}
     </article>
