@@ -149,7 +149,7 @@ To be added after deployment.
 
 | Service | Link |
 |---|---|
-| Frontend (Vercel) | to be added |
+| Frontend (Vercel) | https://project-management-system-dusky-three.vercel.app |
 | Backend (Render) | https://project-management-api-mtz6.onrender.com |
 
 ### Deploy the backend on Render
