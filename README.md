@@ -30,9 +30,9 @@ Team: **Merge Conflict** (Team 16)
 
 | Name | Roll No. | Role |
 |---|---|---|
-| Mayank | - | Team lead |
-| Tejas | - | Member |
-| Parth | - | Member |
+| Mayank | 50 | Team lead |
+| Tejas | 85 | Member |
+| Parth | 57 | Member |
 
 ## Folder structure
 
@@ -150,7 +150,7 @@ To be added after deployment.
 | Service | Link |
 |---|---|
 | Frontend (Vercel) | to be added |
-| Backend (Render) | to be added |
+| Backend (Render) | https://project-management-api-mtz6.onrender.com |
 
 ### Deploy the backend on Render
 
