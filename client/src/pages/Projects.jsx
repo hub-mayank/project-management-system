@@ -96,6 +96,27 @@ function Projects() {
     }
   }
 
+  async function deleteProject(project) {
+    if (!window.confirm(`Delete "${project.name}"?`)) {
+      return
+    }
+
+    setSaving(true)
+    setError('')
+
+    try {
+      await apiRequest(`/projects/${project._id}`, 'DELETE')
+      if (projectToEdit && projectToEdit._id === project._id) {
+        setProjectToEdit(null)
+      }
+      await getProjects()
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setSaving(false)
+    }
+  }
+
   return (
     <div className="container">
       <Navbar />
@@ -129,6 +150,7 @@ function Projects() {
             isAdmin={isAdmin}
             onEdit={editProject}
             onStatusChange={updateStatus}
+            onDelete={deleteProject}
             saving={saving}
           />
         ))}

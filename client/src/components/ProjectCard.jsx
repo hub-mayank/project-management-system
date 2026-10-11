@@ -1,4 +1,4 @@
-function ProjectCard({ project, isAdmin, onEdit, onStatusChange, saving }) {
+function ProjectCard({ project, isAdmin, onEdit, onStatusChange, onDelete, saving }) {
   return (
     <article className="card project-card">
       <h3>{project.name}</h3>
@@ -19,6 +19,7 @@ function ProjectCard({ project, isAdmin, onEdit, onStatusChange, saving }) {
       {isAdmin ? (
         <div className="project-actions">
           <button type="button" onClick={() => onEdit(project)} disabled={saving}>Edit</button>
+          <button type="button" className="danger" onClick={() => onDelete(project)} disabled={saving}>Delete</button>
         </div>
       ) : (
         <div>
